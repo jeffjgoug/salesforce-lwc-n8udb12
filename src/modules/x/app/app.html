@@ -1,0 +1,14 @@
+<template>
+    <template if:true={files}>
+        <ul>
+            <template for:each={files} for:item="file">
+                <li key={file.attachmentId}>
+                    {file.name}
+                </li>
+            </template>
+        </ul>
+    </template>
+    <template if:false={files}>
+        No files found.
+    </template>
+</template>
